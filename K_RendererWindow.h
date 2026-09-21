@@ -10,7 +10,7 @@ class RendererWindow :
 {
 public:
     RendererWindow(int iCmdShow, HINSTANCE hInstance, PCTSTR TemplateName,
-        PCTSTR windowTitle, WNDPROC wProcedure= RendererWindow::windowProc, DWORD type = CS_OWNDC, const int style = 3,
+        PCTSTR windowTitle, WNDPROC wProcedure= RendererWindow::windowProc, DWORD type = WS_OVERLAPPEDWINDOW | CS_OWNDC, const int style = 3,
         int x = CW_USEDEFAULT, int y = CW_USEDEFAULT, int size_x = CW_USEDEFAULT,
         int size_y = CW_USEDEFAULT, HWND parentHandleP = NULL, HMENU menuHandle = NULL, LPVOID param = NULL);
     void userfunction(void) override;

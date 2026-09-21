@@ -39,7 +39,7 @@ LRESULT RendererWindow::windowProc(HWND hwnd, UINT message, WPARAM wParam, LPARA
     {
     case WM_DESTROY:
         PostQuitMessage(0);
-        return 0;
+        return 1;
 
     case WM_CLOSE:
         DestroyWindow(hwnd);

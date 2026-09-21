@@ -1,7 +1,2 @@
 ﻿  K_RendererWindow.cpp
-  K_Renderer_Context.cpp
-  CustomOGLContext.cpp
-  K_OpenGL_Context.cpp
-  Test.cpp
-  Generating Code...
   Cliff's Windows GUI Lib.vcxproj -> G:\Cliff's Libraries\Cliff's Windows GUI Lib\Debug\x86\Kliff's Windows GUI Lib.exe

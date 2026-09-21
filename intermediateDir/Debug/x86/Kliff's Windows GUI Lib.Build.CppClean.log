@@ -6,6 +6,12 @@ g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_window.
 g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_renderer.obj
 g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_dxcontext.obj
 g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\customwindow.obj
+g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_rendererwindow.obj
+g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_opengl_context.obj
+g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\customoglcontext.obj
+g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_shader_opengl.obj
+g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_shader.obj
+g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\k_renderer_context.obj
 g:\cliff's libraries\cliff's windows gui lib\debug\x86\kliff's windows gui lib.exe
 g:\cliff's libraries\cliff's windows gui lib\intermediatedir\debug\x86\kliff's windows gui lib.ilk
 g:\cliff's libraries\cliff's windows gui lib\debug\x86\kliff's windows gui lib.pdb

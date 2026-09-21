@@ -9,7 +9,6 @@
     PSTR szCmdLine, int iCmdShow) \
 {
 #endif
-
 #ifndef END
 #define END }
 #endif
@@ -36,6 +35,7 @@
 ENTRY
 
 RendererWindow renderer = { iCmdShow,hInstance,TEXT("RenderingWindowAPIClass"),TEXT("Nigger") };
+
 renderer.initiate();
    END
  
