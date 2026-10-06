@@ -1,0 +1,11 @@
+﻿  CustomOpenGLContext.cpp
+  CustomWindow.cpp
+  K_DXContext.cpp
+  K_Renderer_Context.cpp
+  K_Window.cpp
+G:\Cliff's Libraries\Cliff's Windows GUI Lib\K_Window.cpp(25,61): warning C4302: 'type cast': truncation from 'LPCTSTR' to 'WORD'
+G:\Cliff's Libraries\Cliff's Windows GUI Lib\K_Window.cpp(29,43): warning C4302: 'type cast': truncation from 'LPCTSTR' to 'WORD'
+  K_OpenGL_Context.cpp
+  K_RendererWindow.cpp
+  Generating Code...
+  Cliff's Windows GUI Lib.vcxproj -> G:\Cliff's Libraries\Cliff's Windows GUI Lib\Output\Debug\x86\Kliff's Windows GUI Lib.lib

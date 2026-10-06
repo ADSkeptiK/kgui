@@ -1,9 +1,11 @@
 #include "K_OpenGL_Context.h"
+#include <gl/GL.h>
+#include <gl/wglext.h>
 //Shouldn't give error
-
-K_OpenGL_Context::K_OpenGL_Context(K_WindowPtr windowAddress) :K_Renderer_Context(windowAddress)
+K_OpenGL_Context::K_OpenGL_Context(K_WindowPtr windowAddress, int mainVersion, int subVersion) :K_Renderer_Context(windowAddress)
 {
 	contextsetting();
+    setOpenGLVersion(mainVersion, subVersion);
 }
 
 void K_OpenGL_Context::contextsetting(void)
@@ -35,9 +37,29 @@ void K_OpenGL_Context::contextsetting(void)
 	wglMakeCurrent(deviceContextHandle, renderingContext);
     
 }
-
-
-
+void K_OpenGL_Context::setOpenGLVersion(const int majorversion, const int subversion)
+{
+    //Version
+    K_OPENGL_CREATE_VERSION_AR(versionarray, majorversion, subversion);
+    const  PFNWGLCREATECONTEXTATTRIBSARBPROC functionLoc= (PFNWGLCREATECONTEXTATTRIBSARBPROC) wglGetProcAddress("wglCreateContextAttribsARB");
+    if (!functionLoc)
+        MessageBoxA(nullptr, "Context Not found nigga", "OpenGL Version", MB_OK);
+    
+    HGLRC newContext = functionLoc(deviceContextHandle, nullptr, versionarray);
+    if (newContext)
+    {
+        wglMakeCurrent(deviceContextHandle, newContext);
+        wglDeleteContext(renderingContext);
+        renderingContext = newContext;
+        const GLubyte* version = glGetString(GL_VERSION);
+        MessageBoxA(nullptr, reinterpret_cast<const char*>(version), "OpenGL Version", MB_OK);
+    }
+    else
+    {
+        DWORD error = GetLastError();
+        MessageBoxA(nullptr, "Context Not found nigga", "OpenGL Version", MB_OK);
+    }
+    }
 /*
 
 

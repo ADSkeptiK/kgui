@@ -1,10 +1,12 @@
-#pragma once
 #include "CustomWindow.h"
-#include "OpenGL/CustomOGLContext.h"
+#include "OpenGL/CustomOpenGLContext.h"
+#ifndef K_RENDERER_WINDOW
+#define K_RENDERER_WINDOW
+
 //forward declaration
 class K_Renderer_Context;
 typedef K_Renderer_Context* RendererPtr;
-class CustomOGLContext;
+class CustomOpenGLContext;
 class RendererWindow :
     public CustomWindow
 {
@@ -17,10 +19,9 @@ public:
     void initiate(void);
 protected:
     RendererPtr current_renderer;
-    CustomOGLContext OpenGLRenderer;
+    CustomOpenGLContext OpenGLRenderer;
     GraphicsAPIs chosen_API = GraphicsAPIs::OpenGL;
 private:
- 
     //Window Proc (MUST be static)
     static LRESULT CALLBACK windowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
@@ -29,3 +30,4 @@ private:
     //DX context to be implemented
 };
 
+#endif // !K_RENDERER_WINDOW

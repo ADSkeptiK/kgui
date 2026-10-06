@@ -3,10 +3,8 @@
 K_Shader::K_Shader(void)
 {
 
-	hardCodedsetdir();
+	openGLShaderDirSet();
 
 }
 
-void K_Shader::hardCodedsetdir(void)
-{
-}
+

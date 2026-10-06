@@ -6,25 +6,26 @@ RendererWindow::RendererWindow(int iCmdShow, HINSTANCE hInstance, PCTSTR Templat
   HMENU menuHandle, LPVOID param):
 CustomWindow(iCmdShow,
     hInstance, TemplateName, windowTitle, wProcedure, type,
-    style, x, y, size_x, size_y, parentHandleP, menuHandle, param),OpenGLRenderer{this}
+    style, x, y, size_x, size_y, parentHandleP, menuHandle, param),OpenGLRenderer{this,3,3}
 {
-
     current_renderer = &OpenGLRenderer;
-
 }
 void RendererWindow::userfunction(void)
 {
-    GetMessage(&message, NULL, 0, 0);
-    TranslateMessage(&message);
-    LRESULT windowisDead=  DispatchMessage(&message);
-    current_renderer->renderW();
-    if (windowisDead)
-    {
-        windowLoopState = 0;
-    }
-    
-}
 
+    BOOL windowstatus = GetMessage(&message, NULL, 0, 0);
+    TranslateMessage(&message);
+    DispatchMessage(&message);
+    if (windowstatus)
+    {
+        
+        current_renderer->renderW();
+    }
+    else
+    {
+        windowLoopState = windowState::DEAD;
+    }
+}
 void RendererWindow::initiate(void)
 {
     enterLoop();
@@ -44,6 +45,7 @@ LRESULT RendererWindow::windowProc(HWND hwnd, UINT message, WPARAM wParam, LPARA
     case WM_CLOSE:
         DestroyWindow(hwnd);
         return 1;
+       
     }
     return DefWindowProc(hwnd, message, wParam, lParam);
 }

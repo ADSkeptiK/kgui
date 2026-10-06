@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include "k_resource.h"
 #include "K_RendererWindow.h"
-#include "CustomWindow.h"
-#include "OpenGL/CustomOGLContext.h"
+
 #ifndef ENTRY
 #define ENTRY int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,\
     PSTR szCmdLine, int iCmdShow) \
@@ -34,10 +33,10 @@
 //Entry point
 ENTRY
 
-RendererWindow renderer = { iCmdShow,hInstance,TEXT("RenderingWindowAPIClass"),TEXT("Nigger") };
-
+RendererWindow renderer = { iCmdShow,hInstance,TEXT("Window Class Name"),TEXT("[YOUR WINDOW TITLE]") };
 renderer.initiate();
-   END
+
+ END
  
         /*
         We left off at the Custom Class you were considering:

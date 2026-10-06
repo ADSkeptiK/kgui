@@ -1,7 +1,7 @@
 #include "K_Shader_OpenGL.h"
 //Shouldn't give error
-
-void K_Shader_OpenGL::hardCodedsetdir(void)
+#include <tchar.h>
+void K_Shader_OpenGL::openGLShaderDirSet(const TCHAR directory[])
 {
-	_tcscpy_s(current_directory, MAX_PATH, TEXT("shaders/"));
+	_tcscpy_s(current_directory, MAX_PATH, TEXT("shaders/OpenGL"));
 }

@@ -1,10 +1,11 @@
 #pragma once
 //Shouldn't give error
 #include "K_Shader.h"
-class K_Shader_OpenGL :
-    public K_Shader
+class K_Shader_OpenGL
 {
-    using K_Shader::K_Shader;
-    void hardCodedsetdir(void)override;
+public:
+    void openGLShaderDirSet(const TCHAR directory[]);
+private:
+    TCHAR current_directory[MAX_PATH];
 };
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "K_Window.h"
 //Shouldn't give error
-
+enum class windowState {DEAD,WAITING,ACTIVE,UNSELECTED};
 class CustomWindow :
 	public K_Window
 {
@@ -14,7 +14,7 @@ public:
 	LPARAM enterLoop(void) override;
 	virtual void userfunction(void)=0;
 protected:
-	unsigned short windowLoopState = 1;
+	windowState windowLoopState = windowState::WAITING;
 
 //	CustomWindow* abstractcall = this;
 

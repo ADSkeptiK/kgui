@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="K_Shader.h" />
-    <ClInclude Include="K_Shader_OpenGL.h" />
-    <ClInclude Include="OpenGL\CustomOGLContext.h" />
+    <ClInclude Include="OpenGL\CustomOpenGLContext.h" />
     <ClInclude Include="CustomWindow.h" />
     <ClInclude Include="DX\K_DXContext.h" />
     <ClInclude Include="K_Editor.h" />
@@ -32,16 +30,13 @@
     <ClInclude Include="K_RendererWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="K_Shader.cpp" />
-    <ClCompile Include="K_Shader_OpenGL.cpp" />
-    <ClCompile Include="OpenGL\CustomOGLContext.cpp" />
+    <ClCompile Include="OpenGL\CustomOpenGLContext.cpp" />
     <ClCompile Include="CustomWindow.cpp" />
     <ClCompile Include="DX\K_DXContext.cpp" />
     <ClCompile Include="K_Renderer_Context.cpp" />
     <ClCompile Include="K_Window.cpp" />
     <ClCompile Include="OpenGL\K_OpenGL_Context.cpp" />
     <ClCompile Include="K_RendererWindow.cpp" />
-    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Cliff%27s Windows GUI Lib.rc" />
@@ -65,7 +60,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -78,7 +73,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -109,20 +104,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir)$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir)$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
+    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

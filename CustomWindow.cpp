@@ -20,7 +20,7 @@ LPARAM CustomWindow::enterLoop(void)
 {
 
 	firstRender();
-	while (windowLoopState)
+	while (windowLoopState!=windowState::DEAD)
 	{
 		userfunction();
 	}

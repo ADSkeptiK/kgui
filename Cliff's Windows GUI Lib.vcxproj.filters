@@ -36,23 +36,14 @@
     <ClInclude Include="CustomWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OpenGL\CustomOGLContext.h">
+    <ClInclude Include="OpenGL\CustomOpenGLContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="K_RendererWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="K_Shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="K_Shader_OpenGL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="K_Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -68,16 +59,10 @@
     <ClCompile Include="CustomWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OpenGL\CustomOGLContext.cpp">
+    <ClCompile Include="OpenGL\CustomOpenGLContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="K_RendererWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="K_Shader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="K_Shader_OpenGL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
