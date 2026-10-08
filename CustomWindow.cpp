@@ -2,6 +2,7 @@
 #include "k_resource.h"
 //Shouldn't give error
 
+
 CustomWindow::CustomWindow(int iCmdShow, HINSTANCE hInstance,
 PCTSTR TemplateName, PCTSTR windowTitle,WNDPROC wProcedure,
 DWORD type, const int style, int x, int y, int size_x, int size_y,

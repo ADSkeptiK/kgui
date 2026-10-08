@@ -1,7 +1,8 @@
 #pragma once
+//This entire header is merely for test
 #include "K_OpenGL_Context.h"
 #include <string>
-//Shouldn't give error
+
 
 //Should be implemented by graphics programmer
 class CustomOpenGLContext :

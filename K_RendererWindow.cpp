@@ -6,7 +6,7 @@ RendererWindow::RendererWindow(int iCmdShow, HINSTANCE hInstance, PCTSTR Templat
   HMENU menuHandle, LPVOID param):
 CustomWindow(iCmdShow,
     hInstance, TemplateName, windowTitle, wProcedure, type,
-    style, x, y, size_x, size_y, parentHandleP, menuHandle, param),OpenGLRenderer{this,3,3}
+    style, x, y, size_x, size_y, parentHandleP, menuHandle, param),OpenGLRenderer{this,4,5}
 {
     current_renderer = &OpenGLRenderer;
 }
