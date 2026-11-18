@@ -1,7 +1,10 @@
 #include <windows.h>
 #include <stdio.h>
-#include "k_resource.h"
-#include "K_RendererWindow.h"
+#include "K_Window.h"
+#include <K_LogSystem.h>
+#include <Shlwapi.h>
+//#include "k_resource.h"
+//#include "K_RendererWindow.h"
 
 #ifndef ENTRY
 #define ENTRY int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,\
@@ -11,7 +14,6 @@
 #ifndef END
 #define END }
 #endif
-
 // Okay so I unfucked the K_Renderer_Context and OpenGL side of the things to a noticable extent It's kinda
 // coming together gotta implement a new member function for the "Modern way" of
 // creating the context and then create an  object of that in the  custom window class as composition
@@ -19,22 +21,26 @@
 
 //Unfuck the K_Window
 
-
-
-
-
-
 //Left mid implementing the RendererWindow we could either implement OpengGL
 // as a virtual of KWindow or as a part of the render loop the choice is yours...
 //
-
-
+char dir[MAX_PATH];
+//Repeated pattern
 
 //Entry point
 ENTRY
 
-RendererWindow renderer = { iCmdShow,hInstance,TEXT("Window Class Name"),TEXT("[YOUR WINDOW TITLE]") };
-renderer.initiate();
+GetModuleFileName(nullptr, dir, MAX_PATH);
+PathRemoveFileSpecA(dir);
+PathAddBackslashA(dir);
+ K_LogSystem log{ "TotalLogs.Klog" ,dir };
+ log.logWTimeDate(K_LOG_INVOCATION_ENTRY(CONSTRUCTOR, K_Window));
+//RendererWindow renderer = { iCmdShow,hInstance,TEXT("Window Class Name"),TEXT("[YOUR WINDOW TITLE]") };
+//renderer.initiate();
+
+
+
+
 
  END
  

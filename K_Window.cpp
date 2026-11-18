@@ -1,24 +1,28 @@
 #include "K_Window.h"
-#include <tchar.h>
-//Shouldn't give error
 
-K_Window::K_Window(int iCmdShow,HINSTANCE hInstance,PCTSTR TemplateName,
-PCTSTR windowTitle, WNDPROC wProcedure, DWORD type, const int style ,
-int x , int y, int size_x ,
-int size_y  ,HWND parentHandleP, HMENU menuHandle, LPVOID param) : szWindowClassName{TemplateName }
-,parentHandle{parentHandleP},windowMenuHandle{menuHandle}, creationParameters{param},dwStyle{type},x{x},y{y},size_x{size_x},size_y{size_y}
+#include <tchar.h>
+#include <string.h>
+//Shouldn't give error
+K_Window::K_Window(int iCmdShow, HINSTANCE hInstance, PCTSTR TemplateName,
+	PCTSTR windowTitle, WNDPROC wProcedure, DWORD type, const int style,
+	int x, int y, int size_x,
+	int size_y, HWND parentHandleP, HMENU menuHandle, LPVOID param) : szWindowClassName{ TemplateName }
+	, parentHandle{ parentHandleP }, windowMenuHandle{ menuHandle }, creationParameters{ param }, dwStyle{ type }, x{ x }, y{ y }, size_x{ size_x }, size_y{ size_y }
 {
-this->icmdshow = iCmdShow;
+
+	this->icmdshow = iCmdShow;
 	//Do the initializations
-windowStructure.hInstance = hInstance;
-windowStructure.lpszClassName = TemplateName;
-windowStructure.style = style;
-this->windowTitle = windowTitle;
-windowStructure.cbClsExtra = 0;
-windowStructure.cbWndExtra = 0;
-windowStructure.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
-windowStructure.lpszMenuName = NULL;
-windowStructure.lpfnWndProc = wProcedure;
+	windowStructure.hInstance = hInstance;
+	windowStructure.lpszClassName = TemplateName;
+	windowStructure.style = style;
+	this->windowTitle = windowTitle;
+	windowStructure.cbClsExtra = 0;
+	windowStructure.cbWndExtra = 0;
+	windowStructure.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	windowStructure.lpszMenuName = NULL;
+	windowStructure.lpfnWndProc = wProcedure;
+
+
 }
 void K_Window::setIcon(LPCTSTR iconId)
 {
@@ -136,5 +140,3 @@ void K_Window::initialization(void)
 
 }
 */
-
-

@@ -15,89 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="K_Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="k_resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="K_Renderer_Context.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="K_Editor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DX\K_DXContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OpenGL\K_OpenGL_Context.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CustomWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OpenGL\CustomOpenGLContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="K_RendererWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OpenGL\OpenGLFunctionsTypedefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OpenGL\tmp.h">
+    <ClInclude Include="K_Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="K_Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DX\K_DXContext.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OpenGL\K_OpenGL_Context.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="K_Renderer_Context.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CustomWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OpenGL\CustomOpenGLContext.cpp">
+    <ClCompile Include="K_Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="K_RendererWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Cliff%27s Windows GUI Lib.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="icon1.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="K:\Docs\T.H.E\Ideas\CreationSpecific\Apps\Genesis Game Engine\Genesis_ico.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="K:\Docs\T.H.E\Ideas\CreationSpecific\Apps\Genesis Game Engine\Genesis_ico1_star filled.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="F:\Profile pics\Genesis_ico.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="F:\Profile pics\NUUUUUU.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="f:\profile pics\icon2.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="F:\Profile pics\curser.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

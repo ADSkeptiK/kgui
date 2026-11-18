@@ -1,0 +1,8 @@
+﻿  CustomWindow.cpp
+  K_Window.cpp
+G:\Cliff's Libraries\Cliff's Windows GUI Lib\K_Window.cpp(29,61): warning C4302: 'type cast': truncation from 'LPCTSTR' to 'WORD'
+G:\Cliff's Libraries\Cliff's Windows GUI Lib\K_Window.cpp(33,43): warning C4302: 'type cast': truncation from 'LPCTSTR' to 'WORD'
+  Generating Code...
+  LINK : G:\Cliff's Libraries\Cliff's Windows GUI Lib\Output\Debug\x64\KGLx64_d.dll not found or not built by the last incremental link; performing full link
+     Creating library G:\Cliff's Libraries\Cliff's Windows GUI Lib\Output\Debug\x64\KGLx64_d.lib and object G:\Cliff's Libraries\Cliff's Windows GUI Lib\Output\Debug\x64\KGLx64_d.exp
+  Cliff's Windows GUI Lib.vcxproj -> G:\Cliff's Libraries\Cliff's Windows GUI Lib\Output\Debug\x64\KGLx64_d.dll

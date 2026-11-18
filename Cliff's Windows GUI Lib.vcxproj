@@ -19,38 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OpenGL\CustomOpenGLContext.h" />
     <ClInclude Include="CustomWindow.h" />
     <ClInclude Include="DX\K_DXContext.h" />
     <ClInclude Include="K_Editor.h" />
-    <ClInclude Include="K_Renderer_Context.h" />
     <ClInclude Include="K_Window.h" />
-    <ClInclude Include="k_resource.h" />
-    <ClInclude Include="OpenGL\K_OpenGL_Context.h" />
-    <ClInclude Include="K_RendererWindow.h" />
-    <ClInclude Include="OpenGL\OpenGLFunctionsTypedefs.h" />
-    <ClInclude Include="OpenGL\tmp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OpenGL\CustomOpenGLContext.cpp" />
     <ClCompile Include="CustomWindow.cpp" />
-    <ClCompile Include="DX\K_DXContext.cpp" />
-    <ClCompile Include="K_Renderer_Context.cpp" />
     <ClCompile Include="K_Window.cpp" />
-    <ClCompile Include="OpenGL\K_OpenGL_Context.cpp" />
-    <ClCompile Include="K_RendererWindow.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Cliff%27s Windows GUI Lib.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="F:\Profile pics\curser.ico" />
-    <Image Include="F:\Profile pics\Genesis_ico.png" />
-    <Image Include="f:\profile pics\icon2.ico" />
-    <Image Include="F:\Profile pics\NUUUUUU.ico" />
-    <Image Include="icon1.ico" />
-    <Image Include="K:\Docs\T.H.E\Ideas\CreationSpecific\Apps\Genesis Game Engine\Genesis_ico.png" />
-    <Image Include="K:\Docs\T.H.E\Ideas\CreationSpecific\Apps\Genesis Game Engine\Genesis_ico1_star filled.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -58,30 +34,30 @@
     <ProjectGuid>{70dd796b-86e3-459b-bdca-f2bdbbc1607b}</ProjectGuid>
     <RootNamespace>CliffsWindowsGUILib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Kliff's Windows GUI Lib</ProjectName>
+    <ProjectName>KGUI</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -94,44 +70,56 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\K_Windows.props" />
+    <Import Project="..\K_debug.props" />
+    <Import Project="..\K_debugname.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\K_Windows.props" />
+    <Import Project="..\K_release.props" />
+    <Import Project="..\K_executable_release.props" />
+    <Import Project="..\K_releasename.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\K_Windows.props" />
+    <Import Project="..\K_debug.props" />
+    <Import Project="..\K_debugname.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\K_Windows.props" />
+    <Import Project="..\K_release.props" />
+    <Import Project="..\K_executable_release.props" />
+    <Import Project="..\K_releasename.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName>KGL$(PlatformTarget)_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName>KGL$(PlatformTarget)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName>KGL$(PlatformTarget)_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)Output\$(Configuration)\$(PlatformTarget)\</OutDir>
-    <IntDir>$(ProjectDir)Output\intermediateDir\$(Configuration)\$(PlatformTarget)\</IntDir>
+    <TargetName>KGL$(PlatformTarget)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level2</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>K_WINDOW_DEV;K_LOGSYSTEM_DEV;K_CUSTOMWINDOW_DEV;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\K_LogSystem\;$(ProjectDir)..\DirectorySystem\;$(ProjectDir)..\Clff'sTimeLibrary\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Shlwapi.lib;K_LogSystem$(PlatformTarget)_d.lib;winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\K_LogSystem\Output\Debug\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -140,28 +128,32 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>K_WINDOW_DEV;K_LOGSYSTEM_DEV;K_CUSTOMWINDOW_DEV;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\K_LogSystem\;$(ProjectDir)..\DirectorySystem\;$(ProjectDir)..\Clff'sTimeLibrary\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Shlwapi.lib;K_LogSystem$(PlatformTarget).lib;winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level2</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>K_WINDOW_DEV;K_LOGSYSTEM_DEV;K_CUSTOMWINDOW_DEV;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\K_LogSystem\;$(ProjectDir)..\DirectorySystem\;$(ProjectDir)..\Clff'sTimeLibrary\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Shlwapi.lib;K_LogSystem$(PlatformTarget)_d.lib;winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\K_LogSystem\Output\Debug\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -170,15 +162,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>K_WINDOW_DEV;K_LOGSYSTEM_DEV;K_CUSTOMWINDOW_DEV;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\K_LogSystem\;$(ProjectDir)..\DirectorySystem\;$(ProjectDir)..\Clff'sTimeLibrary\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Shlwapi.lib;K_LogSystem$(PlatformTarget).lib;winmm.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

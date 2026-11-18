@@ -1,12 +1,21 @@
 #include <Windows.h>
 #include <iostream>
 #include <string>
+
+class K_LogSystem;
+
 #ifndef K_WINDOW_H
 #define K_WINDOW_H
 //Shouldn't give error
+#ifdef K_WINDOW_DEV
+#define K_WINDOW_API __declspec(dllexport)
+#else
+#define K_WINDOW_API __declspec(dllimport)
+#endif // K_LOGSYSTEM_API
+
 
 //Everything related to a window is packed and sets the window proc
-class K_Window
+class  K_WINDOW_API K_Window
 {
 public:
 	//Get window loading kind, the app hInstance,conceptual windowname,window title,its procedure and possibly
@@ -38,12 +47,11 @@ public:
 	HWND getWindowHandle(void);
 	MSG*  getterMessage(void);
 	WNDPROC* getterWindowProc(void);
-
-	
 	//Virtuals
 	virtual void initialization(void);
 	virtual LPARAM enterLoop(void)=0;
 
+	//Test
 	//~K_Window();
 protected:
 	// *** MANDATORIES ***
@@ -61,7 +69,8 @@ protected:
 		MSG message;
 		//WNDPROC windowProcedure = NULL;
 		//Function to happen within the window's loop
-		K_Window* derivedClassPtr=this;
+	//	K_Window* derivedClassPtr=this;
+	
 	// *** MANDATORIES ***
 	//Handle for keeping track of generated window
 	
